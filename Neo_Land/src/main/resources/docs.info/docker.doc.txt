@@ -1,0 +1,31 @@
+For docker-compose
+MAVEN _ clean, after clean -> package after this, you have to add this command in terminal:
+
+               command for add container:
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -d postgres
+
+                 download container:
+docker buildx build  -t app .
+                 activate container:
+docker run -d -p 8080:8080 --name app --link postgres:postgres app
+
+after add command in terminal put this command in terminal, and check the log in docker desktop
+
+       Run docker-compose: docker-compose up --build
+
+
+  Go Postman and check your api request like mine in auth controller:
+
+  http://localhost:8080/auth/registration
+
+  add info about user
+
+  after this, write auth
+
+  http://localhost:8080/auth/authenticate
+
+  and check token for it
+
+  work or not
+
+  and go to deploying your project!!!
