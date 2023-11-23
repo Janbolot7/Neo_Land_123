@@ -1,0 +1,51 @@
+5 endpoints
+
+Инструкция для POSTMAN
+
+1) Show All USERS;
+2) Create USER;
+3) GET USER by ID;
+4) Delete USER by ID;
+5) Auth connect and Take token
+
+1) Show All USERS
+   Выберите GET дальше нужно прописать http://localhost:8080/users/findAll
+   Возвращает обьект в JSON формате и показывает всех пользователей которые есть в базе данных.
+   И обязательно должно выйти STATUS: 200 OK.
+
+2) Create USER
+   Выберите POST дальше нужно прописать http://localhost:8080/auth/registration
+   После заходим в BODY и прописываем данные которые нам нужно добавить, таким образом:
+ {
+  "username": "jan",
+  "password": "123",
+  "confirmPassword": "123",
+  "email": "1233"
+ }
+   Возвращает обьект в JSON формате и добавляет нового пользователя в базу данных.
+   И обязательно должно выйти STATUS: 200 OK.
+
+3)  GET USER by Id
+    Выберите GET дальше нужно прописать http://localhost:8080/users/findById выбрать ID пользователя которого хотим найти.
+    Возвращает обьект в JSON формате и показывает пользователя который есть в базе данных.
+    И обязательно должно выйти 200 OK.
+
+4) DELETE USER by Id
+   Выберите DELETE дальше нужно прописать http://localhost:8080/users/delete/{id} выбрать ID пользователя которого нужно удалить.
+   Возвращает обьект в JSON формате и показывает удаление пользователя в базе данных.
+   И обязательно должно выйти STATUS: 200 OK.
+
+5) Auth connect and Take token
+   Выберите POST дальше нужно прописать http://localhost:8080/auth/authenticate
+   После заходим в BODY и прописываем данные которые нам нужно добавить, таким образом:
+ {
+  "username": "jan",
+  "password": "123"
+ }
+ Возвращает обьект в JSON формате и показывает token.
+     И обязательно должно выйти 200 OK.
+
+
+
+
+
