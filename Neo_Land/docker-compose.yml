@@ -1,28 +1,3 @@
-#version: '3'
-#
-#services:
-#  postgres:
-#    ports:
-#      - 5432
-#    image: postgres:15
-#    container_name: 'java-postgres'
-#    environment:
-#      POSTGRES_USER: postgres
-#      POSTGRES_PASSWORD: postgres
-#      POSTGRES_DB: neo_land123
-#  app:
-#    build:
-#      context: ./
-#      dockerfile: Dockerfile
-#    depends_on:
-#      - postgres
-#    container_name: 'java-back'
-#    ports:
-#      - 8080:8080
-#    environment:
-#      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/neo_land123
-#      SPRING_DATASOURCE_USERNAME: postgres
-#      SPRING_DATASOURCE_PASSWORD: postgres
 version: '3'
 
 services:
